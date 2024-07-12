@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 public interface IDoctorRepository extends JpaRepository <Doctor, Long>{
     Page<Doctor> findByActiveTrue(Pageable pagination);
 
+    // primer cambio en intellij
+
     @Query("""
             select d from Doctor d
             where d.active= 1
